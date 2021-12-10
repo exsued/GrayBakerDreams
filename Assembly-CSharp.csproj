@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\RoomOfInsanity\Scripts\TVSystem.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\CowmanKnocking.cs" />
     <Compile Include="Assets\Base\Player\Inventory\Items\Shotgun.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\DestroyObject.cs" />
@@ -74,13 +75,16 @@
     <Compile Include="Assets\RoomOfInsanity\Scripts\ToNextLevel.cs" />
     <Compile Include="Assets\Base\Environment\InteractableSound.cs" />
     <Compile Include="Assets\Base\Player\Scripts\PlayerCam.cs" />
+    <Compile Include="Assets\RoomOfInsanity\Scripts\GameAccelerator.cs" />
     <Compile Include="Assets\Base\Player\Scripts\Player.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\MonsterKill.cs" />
-    <Compile Include="Assets\RoomOfInsanity\Scripts\SafeQuest.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\FlipCup.cs" />
     <Compile Include="Assets\Base\Environment\Ladder.cs" />
-    <Compile Include="Assets\RoomOfInsanity\Scripts\TVSystem.cs" />
-    <Compile Include="Assets\RoomOfInsanity\Scripts\GameAccelerator.cs" />
+    <Compile Include="Assets\RoomOfInsanity\Scripts\SafeQuest.cs" />
+    <Compile Include="Assets\BedRoomAfterFirstDream\Scripts\Alarm.cs" />
+    <Compile Include="Assets\BedRoomBeforeDreams\Scripts\BedRoom.cs" />
+    <Compile Include="Assets\BedRoomBeforeDreams\Scripts\PillRoomOfInsanity.cs" />
+    <Compile Include="Assets\BedRoomBeforeDreams\Scripts\Bed.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
