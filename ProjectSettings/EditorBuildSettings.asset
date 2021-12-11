@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Intro/Intro.unity
+    guid: f4a061738b7e31b4e9c0f1629327a87a
+  - enabled: 1
+    path: Assets/BedRoomBeforeDreams/BedBeforeDreams.unity
+    guid: 0bac62de532013344aca09c1e7999ace
+  - enabled: 1
     path: Assets/RoomOfInsanity/RoomOfInsanity.unity
     guid: e105fd4fdb5d49b4883c772814542f66
+  - enabled: 1
+    path: Assets/FearDream/FearDream.unity
+    guid: 52c292c0a367bb548b2cd789355b82f8
   - enabled: 1
     path: Assets/BedRoomAfterFirstDream/BedRoom.unity
     guid: dbc275cfc393f5742bbf4b0f407f1d3f

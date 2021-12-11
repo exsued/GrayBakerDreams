@@ -9,6 +9,7 @@ public class TVSystem : MonoBehaviour
     int EnabledTVsCount = 4;
     public UnityEvent startAlarmEvent;
     public Image playerScreenPanel;
+    public string nextScene;
     public void OnTVOff()
     {
         EnabledTVsCount--;
@@ -24,7 +25,7 @@ public class TVSystem : MonoBehaviour
         StartCoroutine(shaking());
         playerScreenPanel.color = new Color(1f, 0f, 0f, 0.4f);
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(nextScene);
     }
     IEnumerator shaking()
     {

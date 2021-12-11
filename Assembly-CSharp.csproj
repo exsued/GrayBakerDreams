@@ -66,10 +66,12 @@
     <Compile Include="Assets\Base\Environment\sewageTreatmentPlantTerminal.cs" />
     <Compile Include="Assets\Base\Player\Inventory\Inventory.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\TV.cs" />
+    <Compile Include="Assets\BedRoomAfterFirstDream\Scripts\Alarm.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\Smaller.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\WakeUp.cs" />
     <Compile Include="Assets\Base\Player\Scripts\SmoothPointTracer.cs" />
     <Compile Include="Assets\Base\Environment\InteractableEvent.cs" />
+    <Compile Include="Assets\BedRoomBeforeDreams\Scripts\PillRoomOfInsanity.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\CowmanInit.cs" />
     <Compile Include="Assets\Base\Environment\Trigger.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\ToNextLevel.cs" />
@@ -80,16 +82,17 @@
     <Compile Include="Assets\RoomOfInsanity\Scripts\MonsterKill.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\FlipCup.cs" />
     <Compile Include="Assets\Base\Environment\Ladder.cs" />
-    <Compile Include="Assets\RoomOfInsanity\Scripts\SafeQuest.cs" />
-    <Compile Include="Assets\BedRoomAfterFirstDream\Scripts\Alarm.cs" />
     <Compile Include="Assets\BedRoomBeforeDreams\Scripts\BedRoom.cs" />
-    <Compile Include="Assets\BedRoomBeforeDreams\Scripts\PillRoomOfInsanity.cs" />
     <Compile Include="Assets\BedRoomBeforeDreams\Scripts\Bed.cs" />
+    <Compile Include="Assets\RoomOfInsanity\Scripts\SafeQuest.cs" />
+    <Compile Include="Assets\Intro\Scripts\IntroText.cs" />
+    <Compile Include="Assets\FearDream\Scripts\Keycard.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
      <None Include="Assets\RoomOfInsanity\1_BlackHole\Shaders\Add.shader" />
      <None Include="Assets\RoomOfInsanity\1_BlackHole\Shaders\AlphaBlend.shader" />
+     <None Include="Assets\Blood decal pack\readme.txt" />
      <None Include="Assets\RoomOfInsanity\1_BlackHole\Shaders\Opaque.shader" />
      <None Include="Assets\RoomOfInsanity\1_BlackHole\Shaders\OpaqueFresnel.shader" />
     <Reference Include="UnityEngine">
