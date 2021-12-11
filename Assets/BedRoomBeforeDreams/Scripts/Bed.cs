@@ -10,7 +10,8 @@ public class Bed : MonoBehaviour, Interactable
     public GameObject asleepPlayer;
     public void Interact()
     {
-        if (string.IsNullOrEmpty(BedRoom.nextLevel) && alignedAlarm.enabled != alignedAlarm.onStartEnabled)
+        print(alignedAlarm.enabled == alignedAlarm.onStartEnabled);
+        if (string.IsNullOrEmpty(BedRoom.nextLevel) || alignedAlarm.isEnabled == alignedAlarm.onStartEnabled)
             return;
         Player.instance.gameObject.SetActive(false);
         asleepPlayer.SetActive(true);

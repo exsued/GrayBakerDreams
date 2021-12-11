@@ -311,7 +311,6 @@ public class PlayerCam : MonoBehaviour
                 transform.localRotation = Quaternion.Slerp(transform.localRotation, yAng, Time.deltaTime * lerpSpeed);
            yield return new WaitForEndOfFrame();
         }
-        print("Gimb " + Player.instance.transform.rotation.eulerAngles);
         transform.localRotation = startRot;
         player.rotation = playerStartRot;
         isLookingAt = false;

@@ -412,6 +412,7 @@ MonoBehaviour:
   sound: {fileID: 168211359}
   buttonOff: {fileID: 8300000, guid: 2a2094c01acd2d04c8a42bf55bfa6713, type: 3}
   onStartEnabled: 0
+  isEnabled: 1
 --- !u!1 &215359162
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c1e61bb7520f0c4f92056cfa8d8eb39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alignedAlarm: {fileID: 0}
+  alignedAlarm: {fileID: 168211362}
   AsleepTime: 5
   asleepPlayer: {fileID: 1825486080}
 --- !u!1 &753395039
@@ -4631,6 +4632,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2701561423840999322, guid: 27078034791d0cd41b31742c0c33d538, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930618719360520858, guid: 27078034791d0cd41b31742c0c33d538, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -25,6 +25,8 @@ public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
     }
     public void Interact()
     {
+        if (Computer.instance && Computer.instance.actived)
+            return;
         StartCoroutine(PlayerWorkWithTerminal());
     }
     IEnumerator LoadingWindow(float time)
@@ -44,6 +46,8 @@ public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
         monitor.gameObject.SetActive(false);
         Player.instance.enabled = true;
         playerCam.transform.localPosition = Vector3.zero;
+        if(Computer.instance != null)
+            Computer.instance.enabled = true;
         playerCam.StopLookAt();
         playerCam.XLockRotate = playerCam.YLockRotate = false;
         activated = false;
@@ -51,6 +55,7 @@ public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
     IEnumerator PlayerWorkWithTerminal()
     {
         activated = true;
+        Player.instance.CanUseComputer = false;
         var player = Player.instance;
         var playerCam = player.alignCamera;
 
@@ -78,6 +83,7 @@ public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
         Player.instance.enabled = true;
         playerCam.StopLookAt();
         playerCam.XLockRotate = playerCam.YLockRotate = false;
+        Player.instance.CanUseComputer = true;
         activated = false;
     }
 }

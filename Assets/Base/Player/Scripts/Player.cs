@@ -49,6 +49,8 @@ public class Player : MonoBehaviour
     RaycastHit stepHit;
     RaycastHit interactHit;
 
+    public bool CanUseComputer = true;
+
     public Transform Feet;
 
     public PlayerCam alignCamera { get; private set; }

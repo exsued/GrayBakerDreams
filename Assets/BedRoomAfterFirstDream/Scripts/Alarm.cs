@@ -9,7 +9,7 @@ public class Alarm : MonoBehaviour,Interactable
     public AudioSource sound;
     public AudioClip buttonOff;
     public bool onStartEnabled = true;
-    bool isEnabled = true;
+    public bool isEnabled = true;
 
     public void Interact()
     {
