@@ -44,6 +44,7 @@ public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
         playerCam.CursorActived = false;
         playerCam.actived = true;
         monitor.gameObject.SetActive(false);
+        if (Player.instance != null)
         Player.instance.enabled = true;
         playerCam.transform.localPosition = Vector3.zero;
         if(Computer.instance != null)

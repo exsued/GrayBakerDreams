@@ -62,10 +62,13 @@
     <Compile Include="Assets\RoomOfInsanity\Scripts\DestroyObject.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\PicturePickup.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\WindowInsane.cs" />
+    <Compile Include="Assets\Base\Player\Scripts\Flashlight.cs" />
     <Compile Include="Assets\Base\Player\Inventory\Items\Item.cs" />
     <Compile Include="Assets\Base\Environment\sewageTreatmentPlantTerminal.cs" />
     <Compile Include="Assets\Base\Player\Inventory\Inventory.cs" />
+    <Compile Include="Assets\Base\NPC\Scripts\ControllerNPC.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\TV.cs" />
+    <Compile Include="Assets\Base\NPC\Scripts\NPC.cs" />
     <Compile Include="Assets\Base\Player\Scripts\WirelessExploits.cs" />
     <Compile Include="Assets\BedRoomAfterFirstDream\Scripts\Alarm.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\Smaller.cs" />
@@ -74,13 +77,17 @@
     <Compile Include="Assets\Base\Environment\InteractableEvent.cs" />
     <Compile Include="Assets\BedRoomBeforeDreams\Scripts\PillRoomOfInsanity.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\CowmanInit.cs" />
+    <Compile Include="Assets\Base\Environment\LoadLevelAtTime.cs" />
+    <Compile Include="Assets\Base\NPC\Baby\Scripts\babyAI.cs" />
     <Compile Include="Assets\Base\Environment\Trigger.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\ToNextLevel.cs" />
     <Compile Include="Assets\Base\Environment\InteractableSound.cs" />
     <Compile Include="Assets\Base\Player\Scripts\PlayerCam.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\GameAccelerator.cs" />
     <Compile Include="Assets\FearDream\Scripts\Keycard.cs" />
+    <Compile Include="Assets\Fear_part2\StartPart2.cs" />
     <Compile Include="Assets\Base\Player\Scripts\Player.cs" />
+    <Compile Include="Assets\BedRoomBeforeDreams\Scripts\ShortMessage.cs" />
     <Compile Include="Assets\Intro\Scripts\IntroText.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\MonsterKill.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\FlipCup.cs" />
@@ -89,7 +96,8 @@
     <Compile Include="Assets\BedRoomBeforeDreams\Scripts\Bed.cs" />
     <Compile Include="Assets\Base\Player\Scripts\Computer.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\SafeQuest.cs" />
-    <Compile Include="Assets\Base\Player\Scripts\Flashlight.cs" />
+    <Compile Include="Assets\FearDream\snd\Tesla.cs" />
+    <Compile Include="Assets\FearDream\Scripts\TipMessage.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />

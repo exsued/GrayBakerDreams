@@ -12,7 +12,10 @@ public class Bed : MonoBehaviour, Interactable
     {
         print(alignedAlarm.enabled == alignedAlarm.onStartEnabled);
         if (string.IsNullOrEmpty(BedRoom.nextLevel) || alignedAlarm.isEnabled == alignedAlarm.onStartEnabled)
+        {
+            ShortMessage.instance.ShortToast("Сначала нужно завести будильник и принять таблетку, прежде чем лечь спать", 3f);
             return;
+        }
         Player.instance.gameObject.SetActive(false);
         asleepPlayer.SetActive(true);
         StartCoroutine(LoadLevelAtTime(5));

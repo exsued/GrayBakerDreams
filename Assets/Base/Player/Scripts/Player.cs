@@ -98,9 +98,6 @@ public class Player : MonoBehaviour
         var type = findByTag(types, stepHit.transform.tag);
         if(type != null)
             foostepsSource.PlayOneShot(type.steps[Random.Range(0, type.steps.Length)]);
-        //foosteps = FMODUnity.RuntimeManager.CreateInstance(soundPath);
-        //foosteps.start();
-        //foosteps.release();
     }
     StepType findByTag(StepType[] types, string tag)
     {

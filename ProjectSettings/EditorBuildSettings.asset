@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/FearDream/FearDream.unity
     guid: 52c292c0a367bb548b2cd789355b82f8
   - enabled: 1
+    path: Assets/Fear_part2/FearPart2.unity
+    guid: 4ccd49af5e9c60a47b229c19ad3faf86
+  - enabled: 1
     path: Assets/BedRoomAfterFirstDream/BedRoom.unity
     guid: dbc275cfc393f5742bbf4b0f407f1d3f
   m_configObjects: {}

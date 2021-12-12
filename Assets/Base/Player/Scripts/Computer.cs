@@ -15,12 +15,12 @@ public class Computer : MonoBehaviour
         actived = false;
         anims.enabled = false;
         var player = Player.instance;
-        var playerCam = player.alignCamera;
+        PlayerCam playerCam = null;
         yield return null;
         while (player == null || playerCam == null)
         {
             player = Player.instance;
-            playerCam = player.alignCamera;
+            playerCam = player?.alignCamera;
             yield return null;
         }
         //yield return new WaitWhile(() => Player.instance && Player.instance.alignCamera);
@@ -33,14 +33,15 @@ public class Computer : MonoBehaviour
                 playerCam.CursorActived = true;
                 actived = true;
                 anims.enabled = true;
+                Terminal.SetActive(true);
                 anims.Play("showNotebook", -1);
                 yield return new WaitForSeconds(0.5f);
-                Terminal.SetActive(true);
                 yield return new WaitWhile(() => !Input.GetButton("Jump"));
-                Terminal.SetActive(false);
                 playerCam.CursorActived = false;
                 anims.Play("hideNotebook", -1);
                 yield return new WaitForSeconds(0.5f);
+                Terminal.SetActive(false);
+
                 actived = false;
             }
             yield return null;
