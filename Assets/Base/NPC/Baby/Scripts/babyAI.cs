@@ -16,7 +16,7 @@ public class babyAI : NPC
 
     Animator animator;
 
-    public AudioClip babyStep;
+    public AudioClip[] babySteps;
     public AudioClip wantToMom, walk;
     private float timer;
     float searchTimer = 0f;
@@ -63,7 +63,7 @@ public class babyAI : NPC
     }
     private void PlayFootstep(float speed)
     {
-        src.PlayOneShot(babyStep);
+        src.PlayOneShot(babySteps[Random.Range(0, babySteps.Length)]);
     }
     void RefreshStates()
     {

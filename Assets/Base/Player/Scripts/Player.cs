@@ -54,8 +54,8 @@ public class Player : MonoBehaviour
     public Transform Feet;
 
     public PlayerCam alignCamera { get; private set; }
-
-
+    public Camera handCam;
+    public bool cctvMode = false;
     private void OnDisable()
     {
         states = PlayerPosState.Walk;
@@ -126,6 +126,28 @@ public class Player : MonoBehaviour
         playerCanvas.SetActive(true);
         alignCamera = GetComponentInChildren<PlayerCam>();
         foostepsSource = Feet.GetComponent<AudioSource>();
+    }
+    public void ToCCTV()
+    {
+        var player = Player.instance;
+        var cam = player.alignCamera;
+        handCam.enabled = false;
+        cam.enabled = false;
+        cam.GetComponent<Camera>().enabled = false;
+        player.enabled = false;
+        cam.GetComponent<AudioListener>().enabled = false;
+        cctvMode = true;
+    }
+    public void ToDefault()
+    {
+        var player = Player.instance;
+        var cam = player.alignCamera;
+        handCam.enabled = true;
+        cam.enabled = true;
+        cam.GetComponent<Camera>().enabled = true;
+        player.enabled = true;
+        cam.GetComponent<AudioListener>().enabled = true;
+        cctvMode = false;
     }
     private bool CanCrouch()
     {

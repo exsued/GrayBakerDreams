@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Events;
 
 public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
 {
@@ -12,6 +13,7 @@ public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
     //private FMOD.Studio.EventInstance audioSource;
     bool activated = false;
     Vector3 startPos;
+    public UnityEvent onExitTerminal;
     void Start()
     {
         monitor.gameObject.SetActive(false);
@@ -19,9 +21,6 @@ public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
     void PlayAudio(string soundPath)
     {
         StartCoroutine(LoadingWindow(3f));
-        //audioSource = FMODUnity.RuntimeManager.CreateInstance(soundPath);
-        //audioSource.start();
-        //audioSource.release();
     }
     public void Interact()
     {
@@ -37,23 +36,50 @@ public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
     }
     public void OnDestroy()
     {
+        ExitTerminalAndDestroy();
+    }
+
+    public void ExitTerminal(bool lastUse = false)
+    {
+        if (!activated)
+            return;
+        StartCoroutine(_exitTerminal(lastUse));
+    }
+    public void ExitTerminalAndDestroy()
+    {
         if (!activated)
             return;
         var player = Player.instance;
         var playerCam = player.alignCamera;
+        playerCam.transform.position = startPos;
         playerCam.CursorActived = false;
         playerCam.actived = true;
         monitor.gameObject.SetActive(false);
-        if (Player.instance != null)
         Player.instance.enabled = true;
-        playerCam.transform.localPosition = Vector3.zero;
-        if(Computer.instance != null)
-            Computer.instance.enabled = true;
         playerCam.StopLookAt();
         playerCam.XLockRotate = playerCam.YLockRotate = false;
+        Player.instance.CanUseComputer = true;
         activated = false;
+        onExitTerminal?.Invoke();
     }
-    IEnumerator PlayerWorkWithTerminal()
+    IEnumerator _exitTerminal(bool lastUse)
+    {
+        var player = Player.instance;
+        var playerCam = player.alignCamera;
+        yield return StartCoroutine(playerCam.TranslateAtPosition(startPos));
+        playerCam.CursorActived = false;
+        playerCam.actived = true;
+        monitor.gameObject.SetActive(false);
+        Player.instance.enabled = true;
+        playerCam.StopLookAt();
+        playerCam.XLockRotate = playerCam.YLockRotate = false;
+        Player.instance.CanUseComputer = true;
+        activated = false;
+        onExitTerminal?.Invoke();
+        if (lastUse)
+            enabled = false;
+    }
+    IEnumerator _enterTerminal()
     {
         activated = true;
         Player.instance.CanUseComputer = false;
@@ -67,8 +93,12 @@ public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
         startPos = playerCam.transform.position;
         yield return StartCoroutine(playerCam.TranslateAtPosition(workPoint));
         monitor.gameObject.SetActive(true);
-        yield return StartCoroutine(LoadingWindow(0.5f));
         playerCam.CursorActived = true;
+    }
+    IEnumerator PlayerWorkWithTerminal()
+    {
+        yield return StartCoroutine(_enterTerminal());
+        yield return StartCoroutine(LoadingWindow(0.5f));
         while (Input.GetKey(KeyCode.F))
         {
             yield return null;
@@ -77,14 +107,6 @@ public class sewageTreatmentPlantTerminal : MonoBehaviour, Interactable
         {
             yield return null;
         }
-        yield return StartCoroutine(playerCam.TranslateAtPosition(startPos));
-        playerCam.CursorActived = false;
-        playerCam.actived = true;
-        monitor.gameObject.SetActive(false);
-        Player.instance.enabled = true;
-        playerCam.StopLookAt();
-        playerCam.XLockRotate = playerCam.YLockRotate = false;
-        Player.instance.CanUseComputer = true;
-        activated = false;
+        ExitTerminal();
     }
 }

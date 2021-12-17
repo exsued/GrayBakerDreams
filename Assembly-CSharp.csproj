@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{C6E73EC8-3790-0768-0406-5C34A70466DC}</ProjectGuid>
+    <ProjectGuid>{AF49EB71-23E7-10E6-DE87-64C41110285B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,6 +62,7 @@
     <Compile Include="Assets\RoomOfInsanity\Scripts\DestroyObject.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\PicturePickup.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\WindowInsane.cs" />
+    <Compile Include="Assets\FearDream\Scripts\TipMessage.cs" />
     <Compile Include="Assets\Base\Player\Scripts\Flashlight.cs" />
     <Compile Include="Assets\Base\Player\Inventory\Items\Item.cs" />
     <Compile Include="Assets\Base\Environment\sewageTreatmentPlantTerminal.cs" />
@@ -85,7 +86,7 @@
     <Compile Include="Assets\Base\Player\Scripts\PlayerCam.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\GameAccelerator.cs" />
     <Compile Include="Assets\FearDream\Scripts\Keycard.cs" />
-    <Compile Include="Assets\Fear_part2\StartPart2.cs" />
+    <Compile Include="Assets\Fear_part2\Scripts\StartPart2.cs" />
     <Compile Include="Assets\Base\Player\Scripts\Player.cs" />
     <Compile Include="Assets\BedRoomBeforeDreams\Scripts\ShortMessage.cs" />
     <Compile Include="Assets\Intro\Scripts\IntroText.cs" />
@@ -93,19 +94,43 @@
     <Compile Include="Assets\RoomOfInsanity\Scripts\FlipCup.cs" />
     <Compile Include="Assets\Base\Environment\Ladder.cs" />
     <Compile Include="Assets\BedRoomBeforeDreams\Scripts\BedRoom.cs" />
+    <Compile Include="Assets\FearDream\snd\Tesla.cs" />
     <Compile Include="Assets\BedRoomBeforeDreams\Scripts\Bed.cs" />
     <Compile Include="Assets\Base\Player\Scripts\Computer.cs" />
     <Compile Include="Assets\RoomOfInsanity\Scripts\SafeQuest.cs" />
-    <Compile Include="Assets\FearDream\snd\Tesla.cs" />
-    <Compile Include="Assets\FearDream\Scripts\TipMessage.cs" />
+    <Compile Include="Assets\Fear_part2\Scripts\CCTV.cs" />
+    <Compile Include="Assets\Fear_part2\Scripts\CCTVServer.cs" />
+    <Compile Include="Assets\Fear_part2\Scripts\NumLockQuest.cs" />
+    <Compile Include="Assets\Fear_part2\Scripts\NumLock.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
      <None Include="Assets\RoomOfInsanity\1_BlackHole\Shaders\Add.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\RoomOfInsanity\1_BlackHole\Shaders\AlphaBlend.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Blood decal pack\readme.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\RoomOfInsanity\1_BlackHole\Shaders\Opaque.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\RoomOfInsanity\1_BlackHole\Shaders\OpaqueFresnel.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.3f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

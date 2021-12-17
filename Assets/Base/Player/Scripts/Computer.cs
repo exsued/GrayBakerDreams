@@ -36,12 +36,23 @@ public class Computer : MonoBehaviour
                 Terminal.SetActive(true);
                 anims.Play("showNotebook", -1);
                 yield return new WaitForSeconds(0.5f);
-                yield return new WaitWhile(() => !Input.GetButton("Jump"));
+                while(!Input.GetButton("Jump") || Player.instance.cctvMode)
+                {
+                    if(Input.GetButton("LookAround") && !Player.instance.cctvMode)
+                    {
+                        playerCam.enabled = true;
+                    }
+                    else
+                    {
+                        playerCam.enabled = false;
+                    }
+                    yield return new WaitForEndOfFrame();
+                }
                 playerCam.CursorActived = false;
+                playerCam.enabled = true;
                 anims.Play("hideNotebook", -1);
                 yield return new WaitForSeconds(0.5f);
                 Terminal.SetActive(false);
-
                 actived = false;
             }
             yield return null;
